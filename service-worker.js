@@ -1,4 +1,4 @@
-const CACHE='lm-importadora-v1.3.3';
+const CACHE='lm-importadora-v1.3.3b';
 const BASE='/IMPORTADORA-L-M/';
 const CORE=[
   BASE,
@@ -13,7 +13,9 @@ const CORE=[
   BASE+'js/catalog-pdf.js',
   BASE+'js/network.js',
   BASE+'js/auth-fix.js',
-  BASE+'icons/icon-lm.svg',
+  BASE+'js/pwa.js',
+  BASE+'icons/icon-192.svg',
+  BASE+'icons/icon-512.svg',
   BASE+'icons/icon-lm-maskable.svg'
 ];
 self.addEventListener('install',event=>{
