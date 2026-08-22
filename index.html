@@ -7,18 +7,12 @@
 <title>L&M Importadora</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 </head>
 <body>
-<div id="app">
-<header class="topbar">
-  <div class="brand"><div class="logo">L&M</div><div><strong>Importadora</strong><small>Ventas · Inventario · Importaciones</small></div></div>
-  <div class="profile"><small>Perfil activo</small><select id="profile"></select></div>
-</header>
-<main id="content"></main>
-<nav id="nav"></nav>
-</div>
-<div id="modal"></div>
+<div id="app"></div>
+<script src="js/config.js"></script>
 <script src="app.js"></script>
 <script src="js/catalog-pdf.js"></script>
 </body>
