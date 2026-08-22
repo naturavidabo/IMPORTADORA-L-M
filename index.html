@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#17382d">
+<meta name="theme-color" content="#0d0d0f">
 <title>L&M Importadora</title>
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
 </head>
 <body>
 <div id="app">
 <header class="topbar">
-  <div class="brand"><div class="logo">L&M</div><div><strong>Importadora</strong><small>Ventas · Inventario · Costos</small></div></div>
+  <div class="brand"><div class="logo">L&M</div><div><strong>Importadora</strong><small>Ventas · Inventario · Importaciones</small></div></div>
   <div class="profile"><small>Perfil activo</small><select id="profile"></select></div>
 </header>
 <main id="content"></main>
@@ -19,5 +20,6 @@
 </div>
 <div id="modal"></div>
 <script src="app.js"></script>
+<script src="js/catalog-pdf.js"></script>
 </body>
 </html>
