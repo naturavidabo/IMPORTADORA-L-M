@@ -1,1 +1,1 @@
-window.LM_CONFIG={SUPABASE_URL:'https://kdjinqejuqpapgekhxkd.supabase.co',SUPABASE_PUBLISHABLE_KEY:'sb_publishable_40Qbb3uTcTdPMLNoTqLkmg_ZC_WdfUE',VERSION:'1.3.3'};
+window.LM_CONFIG={SUPABASE_URL:'https://kdjinqejuqpapgekhxkd.supabase.co',SUPABASE_PUBLISHABLE_KEY:'sb_publishable_40Qbb3uTcTdPMLNoTqLkmg_ZC_WdfUE',VERSION:'1.4.0'};
