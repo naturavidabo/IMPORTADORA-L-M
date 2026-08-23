@@ -1,4 +1,4 @@
-const CACHE='lm-importadora-v1.3.3b';
+const CACHE='lm-importadora-v1.4.0';
 const BASE='/IMPORTADORA-L-M/';
 const CORE=[
   BASE,
@@ -7,6 +7,7 @@ const CORE=[
   BASE+'styles-extra.css',
   BASE+'network.css',
   BASE+'auth-fix.css',
+  BASE+'theme-v14.css',
   BASE+'app.js',
   BASE+'manifest.webmanifest',
   BASE+'js/config.js',
