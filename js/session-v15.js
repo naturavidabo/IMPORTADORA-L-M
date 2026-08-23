@@ -7,11 +7,12 @@
     persistSession:true,
     autoRefreshToken:true,
     detectSessionInUrl:true,
-    storage:window.localStorage,
-    storageKey:'lm-importadora-auth-v15'
+    storage:window.localStorage
   };
   const shared=originalCreate(cfg.SUPABASE_URL,cfg.SUPABASE_PUBLISHABLE_KEY,{auth:authOptions});
   window.LM_DB=shared;
+
+  /* Evita tener dos clientes Auth compitiendo por la misma sesión. */
   window.supabase.createClient=(url,key,options={})=>{
     if(url===cfg.SUPABASE_URL&&key===cfg.SUPABASE_PUBLISHABLE_KEY)return shared;
     return originalCreate(url,key,options);
