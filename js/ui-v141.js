@@ -26,6 +26,14 @@ function decorateNav(){
  if(net&&!net.dataset.lmIcon){net.innerHTML=`<span class="lmNavIcon">${icons.network}</span><span>Red L&M</span>`;net.dataset.lmIcon='1'}
 }
 
+function decoratePlaceholders(){
+ document.querySelectorAll('.thumb,.netThumb').forEach(el=>{
+   if(el.querySelector('img')||el.dataset.lmEmpty==='1')return;
+   const txt=(el.textContent||'').trim();
+   if(txt==='📦'||txt===''){el.innerHTML=icons.box;el.classList.add('lmEmptyThumb');el.dataset.lmEmpty='1'}
+ });
+}
+
 function quickCard(action,icon,title,sub){return `<button class="lmQuickAction" onclick="lmQuick('${action}')">${iconWrap(icon)}<b>${title}</b><small>${sub}</small></button>`}
 function injectQuickActions(){
  const content=document.getElementById('content');if(!content)return;
@@ -77,7 +85,7 @@ function lmQuick(action){
 }
 
 let scheduled=false;
-function enhance(){scheduled=false;decorateNav();injectQuickActions();enhanceSales();ensureFab()}
+function enhance(){scheduled=false;decorateNav();decoratePlaceholders();injectQuickActions();enhanceSales();ensureFab()}
 function schedule(){if(scheduled)return;scheduled=true;requestAnimationFrame(enhance)}
 new MutationObserver(schedule).observe(document.documentElement,{childList:true,subtree:true});
 window.addEventListener('DOMContentLoaded',schedule);setTimeout(schedule,400);setTimeout(schedule,1200);
